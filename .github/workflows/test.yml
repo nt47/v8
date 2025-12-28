@@ -169,7 +169,7 @@ jobs:
           gclient
           fetch v8
           cd v8
-          git checkout tags/v8-$V8_VERSION
+          git checkout tags/$V8_VERSION
           gclient sync
       - name: compile v8 static library
         shell: pwsh
