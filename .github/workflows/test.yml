@@ -1,8 +1,9 @@
 name: build and test v8 libs
-on: [push]
+on:
+  workflow_dispatch:
 
 env:
-  V8_VERSION: "14.3"
+  V8_VERSION: "14.5.149"
 
 defaults:
   run:
@@ -63,7 +64,7 @@ jobs:
 
   build-linux-arm64:
     if: ${{ false }}  # disable
-    name: linux
+    name: linux-arm
     runs-on: ubuntu-22.04-arm
     strategy:
       fail-fast: false
