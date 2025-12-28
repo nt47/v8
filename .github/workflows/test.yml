@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  V8_VERSION: "14.5"
+  V8_VERSION: "14.5.149"
 
 defaults:
   run:
@@ -169,7 +169,7 @@ jobs:
           gclient
           fetch v8
           cd v8
-          git checkout branch-heads/$V8_VERSION
+          git checkout tags/v8-$V8_VERSION
           gclient sync
       - name: compile v8 static library
         shell: pwsh
