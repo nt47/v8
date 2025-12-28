@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 env:
-  V8_VERSION: "14.5.149"
+  V8_VERSION: "14.5"
 
 defaults:
   run:
