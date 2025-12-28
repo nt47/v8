@@ -5,7 +5,7 @@ on:
       - published
 
 env:
-  V8_VERSION: "14.3"
+  V8_VERSION: "14.5.149"
 
 defaults:
   run:
@@ -14,7 +14,7 @@ defaults:
 jobs:
 
   build-linux:
-#    if: ${{ false }}  # disable
+    if: ${{ false }}  # disable
     name: linux
     runs-on: ubuntu-22.04
     strategy:
@@ -81,7 +81,7 @@ jobs:
           asset_content_type: application/gzip
 
   build-mac:
-#    if: ${{ false }}  # disable
+    if: ${{ false }}  # disable
     name: mac
     runs-on: macos-15
     strategy:
